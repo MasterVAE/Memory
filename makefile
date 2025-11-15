@@ -19,11 +19,11 @@ CFLAGS = -D _DEBUG -ggdb3 -std=c++17 -Wall -Wextra -Weffc++ -Waggressive-loop-op
 		 -Wstack-protector -fcheck-new -fsized-deallocation -fstack-protector -fstrict-overflow\
 		 -flto-odr-type-merging -fno-omit-frame-pointer -Wlarger-than=30000 -Wstack-usage=8192\
 		 -pie -fPIE -Werror=vla\
-		 -fsanitize=address,alignment,bool,bounds,enum,float-cast-overflow,float-divide-by-zero,integer-divide-by-zero,leak,nonnull-attribute,null,object-size,return,returns-nonnull-attribute,shift,signed-integer-overflow,undefined,unreachable,vla-bound,vptr
+		 -fsanitize=alignment,bool,bounds,enum,float-cast-overflow,float-divide-by-zero,integer-divide-by-zero,nonnull-attribute,null,object-size,return,returns-nonnull-attribute,shift,signed-integer-overflow,undefined,unreachable,vla-bound,vptr
 
 SOURCES = main.cpp memory_manager.cpp
 OBJECTS := $(addprefix $(OBJ_DIR)/, $(SOURCES:.cpp=.o))
-TARGET = $(TARGET_DIR)/akinator.out
+TARGET = $(TARGET_DIR)/memory.out
 
 HEADERS = $(wildcard $(INCLUDE_DIR)/*.h)
 
